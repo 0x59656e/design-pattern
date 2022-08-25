@@ -2,18 +2,24 @@ package com.designpattern.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class Base implements Serializable {
-    Long id;
-    String description;
-    Timestamp createdDate;
-    Timestamp updatedDate;
+    private Long id;
+    private String description;
+    private Timestamp createdDate = Timestamp.valueOf(LocalDateTime.now());
+    private Timestamp updatedDate = Timestamp.valueOf(LocalDateTime.now());
 
     public Base(Long id, String description, Timestamp createdDate, Timestamp updatedDate) {
         this.id = id;
         this.description = description;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;
+    }
+
+    public Base(Long id, String description) {
+        this.id = id;
+        this.description = description;
     }
 
     public Base() {

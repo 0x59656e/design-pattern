@@ -21,4 +21,12 @@ public class BaseEntityTest {
         logger.info(myBase.toString());
         assertNotNull(myBase);
     }
+
+
+    @Test
+    public void testCreateBaseObjectByAnotherConstructor() {
+        Base myBase = new Base(2l, "Second Base Object");
+        logger.info(myBase.toString());
+        assertNotNull(myBase);
+    }
 }
