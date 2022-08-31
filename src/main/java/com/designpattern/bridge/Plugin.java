@@ -1,5 +1,5 @@
 package com.designpattern.bridge;
 
-public interface Plugin<T> {
-    T function();
+public interface Plugin {
+    void addDescription();
 }
