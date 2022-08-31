@@ -22,6 +22,10 @@ public class Base implements Serializable {
         this.description = description;
     }
 
+    public Base(Long id) {
+        this.id = id;
+    }
+
     public Base() {
     }
 
