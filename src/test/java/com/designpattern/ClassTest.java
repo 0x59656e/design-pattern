@@ -1,6 +1,5 @@
 package com.designpattern;
 
-import java.sql.Timestamp;
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 
