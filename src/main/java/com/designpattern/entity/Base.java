@@ -11,19 +11,19 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class Base {
-    private Long id;
-    private String description;
-    private Timestamp createdDate = Timestamp.valueOf(LocalDateTime.now());
-    private Timestamp updatedDate = Timestamp.valueOf(LocalDateTime.now());
+  private Long id;
+  private String description;
+  private final Timestamp createdDate = Timestamp.valueOf(LocalDateTime.now());
+  private Timestamp updatedDate = Timestamp.valueOf(LocalDateTime.now());
 
-    public Base(Long id, String description) {
-        this.id = id;
-        this.description = description;
-    }
+  public Base(Long id, String description) {
+    this.id = id;
+    this.description = description;
+  }
 
-    public void setDescription(String description) {
-        this.description = description;
-        this.updatedDate = Timestamp.valueOf(LocalDateTime.now());
-    }
+  public void setDescription(String description) {
+    this.description = description;
+    this.updatedDate = Timestamp.valueOf(LocalDateTime.now());
+  }
 
 }
